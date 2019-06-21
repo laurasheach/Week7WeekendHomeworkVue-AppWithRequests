@@ -26,7 +26,7 @@ export default {
   },
 
   mounted(){
-    fetch("https://content.guardianapis.com/search?q=news&format=json&api-key=test")
+    fetch("https://content.guardianapis.com/search?order-by=newest&q=news&api-key=test")
     .then(result => result.json())
     .then(articles => this.articles = articles.response.results)
 
