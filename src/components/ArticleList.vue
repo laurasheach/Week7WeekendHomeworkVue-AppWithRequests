@@ -1,19 +1,19 @@
 <template lang="html">
   <div id="articleList">
     <ul>
-      <list-component v-for="(article, index) in articles" :article="article" :key="index" >{{article.webTitle}}</list-component>
+      <article-list-component v-for="(article, index) in articles" :article="article" :key="index" >{{article.webTitle}}</article-list-component>
     </ul>
   </div>
 </template>
 
 <script>
-import ListComponent from './ListComponent.vue'
+import ArticleListComponent from './ArticleListComponent.vue'
 
 export default {
   name: 'article-list',
   props: ['articles'],
   components: {
-    "list-component": ListComponent
+    "article-list-component": ArticleListComponent
   }
 }
 </script>

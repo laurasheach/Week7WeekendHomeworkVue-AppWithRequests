@@ -2,12 +2,14 @@
   <div id="app">
     <h1>Guardian News Search</h1>
     <article-list :articles="articles"></article-list>
+    <article-detail :article="selectedArticle"></article-detail>
   </div>
 </template>
 
 <script>
 import {eventBus} from './main.js'
 import ArticleList from './components/ArticleList.vue'
+import ArticleListDetail from './components/ArticleListDetail.vue'
 
 export default {
   name: 'app',
@@ -19,7 +21,8 @@ export default {
   },
 
   components: {
-    "article-list": ArticleList
+    "article-list": ArticleList,
+    "article-detail": ArticleListDetail
   },
 
   mounted(){
