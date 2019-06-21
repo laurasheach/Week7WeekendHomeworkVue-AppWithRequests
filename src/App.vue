@@ -1,8 +1,13 @@
 <template>
   <div id="app">
     <h1>Guardian News Search</h1>
-    <article-list :articles="articles"></article-list>
-    <article-detail :article="selectedArticle"></article-detail>
+    <!-- <article-list :articles="articles"></article-list>
+    <article-detail :article="selectedArticle"></article-detail> -->
+    <nav>
+      <router-link :to="{ name: 'articles'}">Articles List</router-link> ||
+      <router-link :to="{ name: 'favourites'}">Favourites</router-link>
+    </nav>
+    <router-view :articles="articles" :article='selectedArticle'  id="view"></router-view>
   </div>
 </template>
 
