@@ -1,18 +1,20 @@
 <template>
   <div id="app">
     <h1>Guardian News Search</h1>
-    <article-list :newsArticles="newsArticles"></article-list>
+    <article-list :articles="articles"></article-list>
   </div>
 </template>
 
 <script>
+import {eventBus} from './main.js'
 import ArticleList from './components/ArticleList.vue'
 
 export default {
   name: 'app',
   data(){
     return {
-      newsArticles: []
+      articles: [],
+      selectedArticle: null
     }
   },
 
@@ -23,7 +25,11 @@ export default {
   mounted(){
     fetch("https://content.guardianapis.com/search?q=news&format=json&api-key=test")
     .then(result => result.json())
-    .then(newsArticles => this.newsArticles = newsArticles.response.results)
+    .then(articles => this.articles = articles.response.results)
+
+    eventBus.$on('article-selected', (article) => {
+      this.selectedArticle = article
+    })
   }
 
 }

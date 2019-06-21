@@ -1,18 +1,25 @@
 <template lang="html">
-  <div id="">
-    <!-- <h2>{{newsArticles[0].webTitle}}</h2> -->
+  <div id="articleList">
     <ul>
-      <li v-for="news in newsArticles" :news="news" >{{news.webTitle}}</li>
+      <list-component v-for="(article, index) in articles" :article="article" :key="index" >{{article.webTitle}}</list-component>
     </ul>
   </div>
 </template>
 
 <script>
+import ListComponent from './ListComponent.vue'
+
 export default {
-  name: 'news-list',
-  props: ['newsArticles']
+  name: 'article-list',
+  props: ['articles'],
+  components: {
+    "list-component": ListComponent
+  }
 }
 </script>
 
 <style lang="css" scoped>
+li {
+  list-style: none;
+}
 </style>
