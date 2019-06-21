@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>Guardian News Search</h1>
-    <article-list :news="news"></article-list>
+    <article-list :newsArticles="newsArticles"></article-list>
   </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
   name: 'app',
   data(){
     return {
-      news: {}
+      newsArticles: []
     }
   },
 
@@ -23,7 +23,7 @@ export default {
   mounted(){
     fetch("https://content.guardianapis.com/search?q=news&format=json&api-key=test")
     .then(result => result.json())
-    .then(news => this.news = news.response)
+    .then(newsArticles => this.newsArticles = newsArticles.response.results)
   }
 
 }

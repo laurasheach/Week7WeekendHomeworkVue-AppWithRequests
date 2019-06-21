@@ -1,13 +1,16 @@
 <template lang="html">
   <div id="">
-    <h2>{{news.results}}</h2>
+    <!-- <h2>{{newsArticles[0].webTitle}}</h2> -->
+    <ul>
+      <li v-for="news in newsArticles" :news="news" >{{news.webTitle}}</li>
+    </ul>
   </div>
 </template>
 
 <script>
 export default {
   name: 'news-list',
-  props: ['news']
+  props: ['newsArticles']
 }
 </script>
 
