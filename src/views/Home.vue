@@ -2,7 +2,10 @@
   <div class="">
 
     <h1>Homepage</h1>
+
+    <router-link :to="{ name: 'articles'}">
     <button type="button" name="button">News</button>
+    </router-link>
 
   </div>
 </template>
