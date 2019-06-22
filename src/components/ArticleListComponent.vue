@@ -10,7 +10,7 @@ export default {
   props: ['article'],
   methods: {
     handleClick(){
-      eventBus.$emit('article-selected', this.article)
+      eventBus.$emit('article-detail', this.article)
     }
   }
 }

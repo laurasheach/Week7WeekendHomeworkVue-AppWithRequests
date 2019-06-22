@@ -3,6 +3,7 @@
     <h1>Articles</h1>
     <article-list :articles="articles"></article-list>
     <article-list-detail :article="article"></article-list-detail>
+
   </div>
 </template>
 
@@ -21,4 +22,8 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+
+
+
 </style>

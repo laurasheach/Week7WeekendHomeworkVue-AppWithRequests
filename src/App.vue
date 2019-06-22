@@ -4,10 +4,11 @@
     <!-- <article-list :articles="articles"></article-list>
     <article-detail :article="selectedArticle"></article-detail> -->
     <nav>
+      <router-link :to="{ name: 'home'}">Home</router-link> ||
       <router-link :to="{ name: 'articles'}">Articles List</router-link> ||
       <router-link :to="{ name: 'favourites'}">Favourites</router-link>
     </nav>
-    <router-view :articles="articles" :article='selectedArticle'  id="view"></router-view>
+    <router-view :articles="articles" :article='selectedArticle' :favourites="favourites" id="view"></router-view>
   </div>
 </template>
 
@@ -21,7 +22,8 @@ export default {
   data(){
     return {
       articles: [],
-      selectedArticle: null
+      selectedArticle: null,
+      favourites: []
     }
   },
 
@@ -35,8 +37,12 @@ export default {
     .then(result => result.json())
     .then(articles => this.articles = articles.response.results)
 
-    eventBus.$on('article-selected', (article) => {
+    eventBus.$on('article-detail', (article) => {
       this.selectedArticle = article
+    })
+
+    eventBus.$on('article-selected', (article) => {
+      this.favourites.push(article)
     })
   }
 
