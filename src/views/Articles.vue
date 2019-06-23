@@ -1,7 +1,7 @@
 <template lang="html">
   <div id="">
     <h1>Articles</h1>
-    <h2>Headlines</h2>
+    <h2>Current News Headlines</h2>
     <p>Click headline for more information</p>
       <div id="headlines">
         <h3><article-list :articles="articles" :favourites="favourites"></article-list></h3>
