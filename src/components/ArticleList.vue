@@ -3,7 +3,6 @@
 
     <ul>
       <article-list-component v-for="(article, index) in articles" :article="article" :key="index" >{{article.webTitle}}</article-list-component>
-
     </ul>
 
   </div>
@@ -22,7 +21,16 @@ export default {
 </script>
 
 <style lang="css" scoped>
+ul {
+  text-align: left;
+  width: 45vw;
+  margin: 0;
+  padding: 0;
+  background: rgba(210, 210, 210, 0.75);
+}
+
 li {
-  list-style: none;
+  list-style: square;
+  list-style-position: inside;
 }
 </style>

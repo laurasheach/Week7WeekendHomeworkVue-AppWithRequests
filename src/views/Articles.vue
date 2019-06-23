@@ -2,10 +2,9 @@
   <div id="">
     <h1>Articles</h1>
     <h2>Headlines</h2>
+    <p>Click headline for more information</p>
       <div id="headlines">
         <h3><article-list :articles="articles" :favourites="favourites"></article-list></h3>
-      </div>
-      <div class="detail">
         <article-list-detail :article="article" :favourites="favourites"></article-list-detail>
       </div>
   </div>
@@ -29,8 +28,9 @@ export default {
 
 #headlines {
   line-height: 2.0;
+  width: 80%;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
 }
 
 </style>

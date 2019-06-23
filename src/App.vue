@@ -1,8 +1,7 @@
 <template>
   <div id="app">
+
     <header>Guardian News Search</header>
-    <!-- <article-list :articles="articles"></article-list>
-    <article-detail :article="selectedArticle"></article-detail> -->
 
     <nav>
       <router-link :to="{ name: 'home'}">Home</router-link>
@@ -11,9 +10,9 @@
     </nav>
 
     <body>
-    <router-view :articles="articles" :article='selectedArticle' :favourites="favourites" id="view"></router-view>
-
+      <router-view :articles="articles" :article='selectedArticle' :favourites="favourites" id="view"></router-view>
     </body>
+
   </div>
 </template>
 
@@ -73,20 +72,21 @@ export default {
 }
 
 header {
-  background: #3423A6;
+  background: #FFFFFF;
   height: 15vh;
   width: 100vw;
-  color: #FFFFFF;
+  color: #3423A6;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   font-family: 'Rosario', sans-serif;
   font-size: 50px;
+  font-weight: bold;
 }
 
 nav {
-  background: #FFFFFF;
+  background: #3423A6;
   height: 8vh;
   width: 100vw;
   display: flex;
@@ -100,7 +100,7 @@ nav {
 
 body {
   font-family: 'Rosario', sans-serif;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 body::after {
@@ -118,12 +118,12 @@ body::after {
 }
 
 a {
-  color: #3423A6;
+  color: #FFFFFF;
   padding: 10px;
 }
 
 a:visited{
-  color: #3423A6;
+  color: #FFFFFF;
 }
 
 </style>

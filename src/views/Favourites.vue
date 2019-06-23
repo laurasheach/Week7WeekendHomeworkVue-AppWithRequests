@@ -1,8 +1,11 @@
 <template lang="html">
   <div id="">
-    <h1>Favourites</h1>
-      <article-list :articles="favourites" :favourites="favourites"></article-list>
+    <h1>Articles</h1>
+    <h2>Favourites</h2>
+    <div id="headlines">
+      <h3><article-list :articles="favourites" :favourites="favourites"></article-list></h3>
       <article-list-detail :article="article" :favourites="favourites"></article-list-detail>
+    </div>
   </div>
 </template>
 
@@ -21,4 +24,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+#headlines {
+  line-height: 2.0;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
 </style>

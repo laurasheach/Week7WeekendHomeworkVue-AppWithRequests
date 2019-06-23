@@ -4,7 +4,7 @@
     <p><span>Guardian Section Name</span>: {{article.sectionName}}</p>
     <p><span>Article Type</span>: {{article.type}}</p>
     <p v-model="dateFormatted"><span>Publication Date: {{dateFormatted}}</span></p>
-    <a :href="article.webUrl">Visit Article</a>
+    <a :href="article.webUrl" class="favourites" >Visit Article</a>
     <br>
     <br>
     <button v-if="!inFavourites" v-on:click="handleButton" type="button" name="button">Add to Favourites</button>
@@ -39,13 +39,33 @@ export default {
 
 #articleDetail {
   box-sizing: border-box;
-  height: 250px;
+  height: 300px;
   margin: auto;
   width: 30%;
-  background: #eee;
-  color: #222;
+  background: rgba(210, 210, 210, 0.75);
+  color: #3423A6;
   padding: 10px;
   border: 1px solid #ccc;
+}
+
+.favourites {
+  color: #3423A6;
+  padding: 10px;
+}
+
+.favourites{
+  color: #3423A6;
+}
+
+button {
+  background-color: rgba(255, 255, 255, 0.75);
+  border: none;
+  color: #3423A6;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
 </style>
