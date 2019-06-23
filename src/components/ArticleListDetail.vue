@@ -2,6 +2,7 @@
 
   <div v-if="article" id="articleDetail">
     <p><span>Guardian Section Name</span>: {{article.sectionName}}</p>
+    <p><span>Article Type</span>: {{article.type}}</p>
     <p v-model="dateFormatted"><span>Publication Date: {{dateFormatted}}</span></p>
     <a :href="article.webUrl">Visit Article</a>
     <br>
@@ -38,7 +39,7 @@ export default {
 
 #articleDetail {
   box-sizing: border-box;
-  height: 200px;
+  height: 250px;
   margin: auto;
   width: 30%;
   background: #eee;

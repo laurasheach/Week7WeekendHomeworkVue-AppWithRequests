@@ -28,7 +28,7 @@ export default {
     return {
       articles: [],
       selectedArticle: null,
-      favourites: []
+      favourites: [],
     }
   },
 
@@ -48,6 +48,10 @@ export default {
 
     eventBus.$on('article-selected', (article) => {
       this.favourites.push(article)
+    });
+
+    eventBus.$on('subject-selected', (subject) => {
+      this.selectedSubject = subject
     });
   }
 }

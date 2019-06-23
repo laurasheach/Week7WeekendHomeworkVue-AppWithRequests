@@ -1,17 +1,17 @@
 <template lang="html">
   <div class="">
 
-    <h3>For today's headline please head on in:</h3>
+    <h3>For today's headlines please head on in:</h3>
     <router-link :to="{ name: 'articles'}">
     <button type="button" name="button">Enter</button>
     </router-link>
-
   </div>
 </template>
 
 <script>
 export default {
-  name: 'home'
+  name: 'home',
+
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template lang="html">
   <div id="">
     <h1>Articles</h1>
-    <h2>News Headlines</h2>
+    <h2>Headlines</h2>
       <div id="headlines">
         <h3><article-list :articles="articles" :favourites="favourites"></article-list></h3>
       </div>
@@ -30,7 +30,7 @@ export default {
 #headlines {
   line-height: 2.0;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 </style>
