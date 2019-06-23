@@ -1,9 +1,9 @@
 <template lang="html">
   <div id="">
     <h1>Articles</h1>
+    <h2>News Headlines</h2>
     <article-list :articles="articles"></article-list>
     <article-list-detail :article="article"></article-list-detail>
-
   </div>
 </template>
 

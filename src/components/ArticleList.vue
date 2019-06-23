@@ -1,8 +1,11 @@
 <template lang="html">
   <div id="articleList">
+
     <ul>
       <article-list-component v-for="(article, index) in articles" :article="article" :key="index" >{{article.webTitle}}</article-list-component>
+
     </ul>
+
   </div>
 </template>
 

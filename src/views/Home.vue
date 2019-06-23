@@ -1,10 +1,9 @@
 <template lang="html">
   <div class="">
 
-    <h1>Homepage</h1>
-
+    <h3>For today's headline please head on in:</h3>
     <router-link :to="{ name: 'articles'}">
-    <button type="button" name="button">News</button>
+    <button type="button" name="button">Enter</button>
     </router-link>
 
   </div>
@@ -17,4 +16,16 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+button {
+  background-color: rgba(255, 255, 255, 0.75);
+  border: none;
+  color: #3423A6;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
+
 </style>
