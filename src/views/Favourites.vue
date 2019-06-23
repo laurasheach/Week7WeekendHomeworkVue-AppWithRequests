@@ -2,7 +2,7 @@
   <div id="">
     <h1>Favourites</h1>
       <article-list :articles="favourites" :favourites="favourites"></article-list>
-      <article-list-detail :article="article"></article-list-detail>
+      <article-list-detail :article="article" :favourites="favourites"></article-list-detail>
   </div>
 </template>
 

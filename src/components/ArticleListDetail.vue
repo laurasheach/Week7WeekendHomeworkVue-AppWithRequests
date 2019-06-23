@@ -6,7 +6,7 @@
     <a :href="article.webUrl">Visit Article</a>
     <br>
     <br>
-    <button v-on:click="handleButton" type="button" name="button">Add to Favourites</button>
+    <button v-if="!inFavourites" v-on:click="handleButton" type="button" name="button">Add to Favourites</button>
   </div>
 
 </template>
@@ -21,6 +21,9 @@ export default {
     dateFormatted: function (){
       const shortDate = this.article.webPublicationDate.slice(0,10);
       return shortDate
+    },
+    inFavourites: function (){
+      return this.favourites.includes(this.article);
     }
   },
   methods: {

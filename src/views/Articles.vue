@@ -2,8 +2,12 @@
   <div id="">
     <h1>Articles</h1>
     <h2>News Headlines</h2>
-    <article-list :articles="articles"></article-list>
-    <article-list-detail :article="article"></article-list-detail>
+      <div id="headlines">
+        <h3><article-list :articles="articles" :favourites="favourites"></article-list></h3>
+      </div>
+      <div class="detail">
+        <article-list-detail :article="article" :favourites="favourites"></article-list-detail>
+      </div>
   </div>
 </template>
 
@@ -13,7 +17,7 @@ import ArticleListDetail from '@/components/ArticleListDetail.vue'
 
 export default {
   name: 'articles',
-  props: ['articles', 'article'],
+  props: ['articles', 'article', 'favourites'],
   components: {
     "article-list": ArticleList,
     "article-list-detail": ArticleListDetail
@@ -23,7 +27,10 @@ export default {
 
 <style lang="css" scoped>
 
-
-
+#headlines {
+  line-height: 2.0;
+  display: flex;
+  justify-content: flex-start;
+}
 
 </style>
